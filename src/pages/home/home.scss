@@ -12,11 +12,14 @@
     }
     .charts {
       padding: 5px 20px;
+      display: flex;
+
       .chartOuter{
         // background: pink;
         -webkit-box-shadow: 8px 8px 5px -2px rgba(0,0,0,0.29);
         -moz-box-shadow: 8px 8px 5px -2px rgba(0,0,0,0.29);
         box-shadow: 8px 8px 5px -2px rgba(0,0,0,0.29);
+        flex: 12;
       }
     }
 

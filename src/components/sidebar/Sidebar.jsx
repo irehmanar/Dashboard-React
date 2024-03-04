@@ -11,29 +11,44 @@ import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className='sideBar'>
       <div className="top">
+      <Link to="/" style={{ textDecoration: "none" }}>
         <span className="logo">Abdul Rehman</span>
+      </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
+
           <p className="title">MAIN</p>
+
+          <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <DashboardIcon className='icon'/>
             <span>Dashboard</span>
           </li>
+          </Link>
+
           <p className="title">LISTS</p>
-          <li>
-            <PermIdentityIcon className='icon'/>
-            <span>User</span>
-          </li>
-          <li>
-            <Inventory2Icon className='icon'/>
-            <span>Products</span>
-          </li>
+
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PermIdentityIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <Inventory2Icon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+
           <li>
             <CardTravelIcon className='icon'/>
             <span>Order</span>
@@ -75,12 +90,7 @@ function Sidebar() {
           </li>
         </ul>
       </div>
-      <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-      </div>
     </div>
   )
 }
-
 export default Sidebar
