@@ -21,7 +21,9 @@ function Home() {
         </div>
         <div className="charts">
           <Featured/>
-          <Chart/>
+          <div className="chartOuter">
+          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} /> <Chart/>
+          </div>
         </div>
 
         <div className="listContainer">
